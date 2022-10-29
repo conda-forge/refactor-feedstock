@@ -1,5 +1,5 @@
 {% set name = "refactor" %}
-{% set version = "0.6.2" %}
+{% set version = "0.6.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/refactor-{{ version }}.tar.gz
-  sha256: 21efda726fd1317287ad1a174578b4769b8b04022b90e7ba7f6c52cf8069a4af
+  sha256: 165f969522894ab4db7e14fe5408d7c664b0d36a208b76aa3d8e1898beb07d5f
 
 build:
   number: 0
