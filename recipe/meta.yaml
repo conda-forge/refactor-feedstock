@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/refactor-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/refactor-{{ version }}.tar.gz
   sha256: 165f969522894ab4db7e14fe5408d7c664b0d36a208b76aa3d8e1898beb07d5f
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - refactor = refactor.__main__:main
@@ -20,10 +20,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools >=40.8.0
   run:
-    - python >=3.9
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -33,6 +33,7 @@ test:
     - refactor --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/isidentical/refactor
